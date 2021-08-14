@@ -19,6 +19,7 @@ RUN chmod +x /usr/local/bin/chromedriver
 
 # Python pip and common packages
 RUN apt install -y python3 python3-pip
+RUN python3 -m pip install --upgrade pip
 RUN pip install pandas selenium requests progress pytz flask beautifulsoup4
 
 CMD echo 'Worker Ready'
