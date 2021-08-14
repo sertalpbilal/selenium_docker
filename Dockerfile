@@ -17,7 +17,8 @@ RUN unzip ./chromedriver.zip
 RUN mv ./chromedriver /usr/local/bin/chromedriver
 RUN chmod +x /usr/local/bin/chromedriver
 
-# Python3 and pip
+# Python pip and common packages
 RUN apt install -y python3 python3-pip
+RUN pip install pandas selenium requests progress pytz flask beautifulsoup4
 
 CMD echo 'Worker Ready'
